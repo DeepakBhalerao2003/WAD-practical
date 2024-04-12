@@ -1,0 +1,36 @@
+.createquizz{
+display: flex;
+    justify-content: center;
+}
+.quizzContainer{
+    max-width: 900px;
+    width: 100%;
+}
+.quizzContainer form{
+    width: 100%;
+    margin: 0 auto;
+}
+.question, .option{
+    width: 100%;
+    display: flex;
+    margin: 20px auto;
+
+}
+.quizzContainer form  textarea{
+    max-width: 900px;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 10px;
+}
+.questions textarea{
+    height: 100px;
+}
+.options textarea{
+    height: 70px;
+}
+
+
+
+.error{
+    color: red;
+}
