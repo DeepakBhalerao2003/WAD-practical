@@ -16,6 +16,7 @@ hr{
     /* display: flex; */
     max-width: 300px;
     width: 100%;
+    
     border: 2px solid gray;
     padding: 30px;
 

@@ -9,6 +9,7 @@ const AttemptQuizz = () => {
 
   const [questions, setquestions] = useState(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(null);
+  const [quizzNotFound, setquizzNotFound] = useState(false);
   const [questionexists, setquestionexists] = useState(false)
   const [userStatus, setUserStatus] = useState(true);
   const {
@@ -41,13 +42,45 @@ const AttemptQuizz = () => {
             'Content-Type': 'application/json',
           }}
         );
-        console.log(r);
+        // console.log(r);
         if(r.status === 200){
           setquestionexists(true)
           setquestions(r.data.questions);
         }
+        else if( r.status === 404){
+          setquizzNotFound(true);
+        }
+        else{
+          console.log(r.status)
+        }
       }catch(error){
-        console.log(error)
+        if (axios.isAxiosError(error)) {
+          // Handle Axios-related errors
+          console.error('Axios Error:', error.message);
+          
+          if (error.response) {
+            // The server responded with an error status code (e.g., 404)
+            console.log('Server responded with:', error.response.status);
+    
+            // Extract error message from server response data
+            const errorMessage = error.response.data;
+            console.log('Error Message:', errorMessage);
+    
+            // Check if the error is due to a specific condition (e.g., Quizz not found)
+            if (error.response.status === 404) {
+              console.log('Quizz not found');
+              setquizzNotFound(true);
+              // Optionally, display error message to the user or handle accordingly
+            }
+    
+            // Handle other server response statuses if needed
+          }
+        } else {
+          // Handle other non-Axios-related errors (e.g., network error, client-side error)
+          console.error('Error submitting quizz data:', error);
+        }
+
+
       }
     }
     fetchQuizz();
@@ -67,22 +100,51 @@ const AttemptQuizz = () => {
 
   const [FormQuestion, setFormQuestion] = useState(null);
   const [questionNumber, setQuestionNumber] = useState(null);
+  const [submitsuccess, setsubmitSuceess] = useState(false);
   const displayQuestion = (question, index) => {
     console.log(question);
     setFormQuestion(question);
     setQuestionNumber(index + 1)
   }
   const onSubmitResponse = async (data) => {
-    console.log(data);
+    //console.log(data);
 
-    const r = await axios.put()
+    try {
+      const r = await axios.post( `http://localhost:3000/attemptquizz/attempt/${quizzId}`, data,
+      {
+        headers:{
+          "auth-token": authToken,
+          "Content-Type": "application/json"
+        }
+      });
+
+      if(r.status === 200){
+        setsubmitSuceess(true);
+        console.log(r.data);
+        alert('Quizz Submitted SuccessFully')
+
+      }
+      else{
+        alert('Some Error Occurred')
+      }
+    } catch (error) {
+      console.log(error)
+    }
+
   }
   const [selectOption, setSelectedOption] = useState(null)
 
   return (
+
+    
+
     <div className='attemptQuizzContainer'>
 
-      
+        {quizzNotFound && (
+          <div className='quizzNotFound'>
+            Please Enter valid quizz Id
+          </div>
+        )}
 
       {questions && (
         <div className='QuestionList'>

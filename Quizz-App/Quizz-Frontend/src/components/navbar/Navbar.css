@@ -8,6 +8,16 @@ nav{
 }
 nav .logo{
     font-size: 1.5rem;
+   
+}
+nav .logo a{
+
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+nav .logo img{
+    width: 100px;
 }
 nav .logo:hover{
     cursor: pointer;
@@ -22,8 +32,8 @@ nav .links ul{
     display: flex;
     height: 100%;
     align-items: center;
-
 }
+
 nav .links ul li{
     font-size: 1.17rem;
     list-style: none;

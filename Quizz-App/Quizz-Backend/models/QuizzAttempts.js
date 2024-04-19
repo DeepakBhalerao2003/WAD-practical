@@ -1,37 +1,43 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const quizzAttemptSchema = new mongoose.Schema({
-    quizzid: {
+  quizzid: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "quizz",
+    required: true,
+  },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "user",
+    required: true,
+  },
+  response: [
+    {
+      questionId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'quizz',
-        required: true
-    },
-    user : {
+        ref: "quizzquestion.questions.question",
+      },
+      selectedOptionId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'user',
-        required: true
+        ref: "quizzquestion.questions.options.option",
+      },
+      correctOptionId:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "quizzquestion.questions.options.option",
+      }
     },
-    response: [
-        {
-            question: {
-                questionId: {
-                    type: mongoose.Schema.Types.ObjectId,
-                    ref: 'quizzquestion.questions.question',
-                },
-                choosedOption:{
-                    type: mongoose.Schema.Types.ObjectId,
-                    ref: 'quizzquestion.options.option',
-                }
-            }
-        }
-    ],
-    date: {
-        type: Date,
-        default: Date.now,
-        required: true
-    }
-    
+  ],
+  MarksObtained: {
+    type: Number,
+  },
+  totalMarks:{
+    type: Number,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+    required: true,
+  },
 });
 
-
-module.exports = mongoose.model('quizzattempts', quizzAttemptSchema);
+module.exports = mongoose.model("quizzattempts", quizzAttemptSchema);
