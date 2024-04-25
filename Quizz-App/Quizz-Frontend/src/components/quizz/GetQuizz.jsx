@@ -29,6 +29,10 @@ const GetQuizz = () => {
     }
 
     useEffect(()=>{
+        const authToken = sessionStorage.getItem("authToken");
+        if(!authToken){
+            navigate('/login');
+        }
         const fetchdata = async ()=>{
             try {
                 

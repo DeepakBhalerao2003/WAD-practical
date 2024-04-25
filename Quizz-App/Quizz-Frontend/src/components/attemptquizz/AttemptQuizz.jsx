@@ -33,6 +33,11 @@ const AttemptQuizz = () => {
   const Uri = `http://localhost:3000/attemptquizz/getquizz/${quizzId}`
 
   useEffect(()=>{
+    if(!authToken){
+      navigate('/login');
+    }
+  
+
     const fetchQuizz = async (data)=>{
       try{
         const r = await axios.get(

@@ -90,6 +90,10 @@ const GenerateQuestions = () => {
   };
 
   useEffect(() => {
+    if(!authToken){
+      navigate('/login');
+    }
+  
     if (quizzId) {
       console.log(quizzId);
       // Fetching the quizz from the database for the owner

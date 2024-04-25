@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import "./AttemptHistory.css"
+import { useNavigate } from 'react-router-dom';
 
 const AttemptHistory = () => {
+    const navigate = useNavigate();
     const authToken = sessionStorage.getItem('authToken');
     const [AttemptHistory, setAttempthistory] = useState([]);
-    const [isAttemptHistory, setIsAttemptHistory] = useState(false)
+    const [isAttemptHistory, setIsAttemptHistory] = useState(false);
+
+    
+
     useEffect(()=>{
+        if(!authToken){
+            navigate('/login');
+        }
+        
         const fetchAttemptHistory = async()=>{
             const r = await axios.get('http://localhost:3000/attemptquizz/history', { headers:{ 'auth-token': authToken } });
-            // console.log(r.data);
+            
         if(r.status === 200){
            
             const attempts = r.data.AttemptHistory;
@@ -21,7 +30,11 @@ const AttemptHistory = () => {
 
         fetchAttemptHistory();
     }, [authToken, isAttemptHistory]);
-    console.log(AttemptHistory);         
+  
+    
+    const showResponse = (attemptId) => {
+        navigate(`/response/${attemptId}`);
+    }
 
   return (
     <div className='AttemptHistoryContainer'>
@@ -31,6 +44,8 @@ const AttemptHistory = () => {
                 <p className='title'><strong>Title: </strong>{attempt.title}</p>
                 <p className="quizzId"><strong>QuizzId: </strong>{attempt.quizzId}</p>
                 <p><strong>Marks Obtained : </strong> {attempt.MarksObtained} / {attempt.totalMarks}</p>
+
+                <button onClick={()=> showResponse(attempt.attemptId)}>See Response</button>
             </div>
         ))
     )}

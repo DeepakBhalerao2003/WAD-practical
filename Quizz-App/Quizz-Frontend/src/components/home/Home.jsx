@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import AttemptQuizz from '../attemptquizz/AttemptQuizz'
 import axios from 'axios';
@@ -18,7 +18,13 @@ const Home = () => {
   const authToken = sessionStorage.getItem('authToken');
   const [isAuthorised, setIsAuthorised] = useState(true);
   const [quizz, setquizz] = useState(null);
-  const [quizzNotFound, setquizzNotFound] = useState(false)
+  const [quizzNotFound, setquizzNotFound] = useState(false);
+
+  useEffect(()=>{
+    if(!authToken){
+      navigate('/login');   
+    }  
+  })
 
   const onSubmit = async (data)=>{
     try{

@@ -14,6 +14,7 @@ connectToMongoDb;
 app.use('/auth', require('./routes/auth'));
 app.use('/quizz', require('./routes/quizz'));
 app.use('/attemptquizz', require('./routes/quizzattempts'));
+app.use('/quizzresponse', require('./routes/quizzresponse'));
 
 app.listen(PORT, ()=>{
     console.log('Server is running on Port ', PORT)

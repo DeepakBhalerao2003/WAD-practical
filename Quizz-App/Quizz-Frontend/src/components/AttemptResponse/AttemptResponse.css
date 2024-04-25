@@ -1,0 +1,41 @@
+.quizzContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.attemptResponse{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.attemptResponse .con{
+    display: flex;
+    justify-content: space-between;
+}
+
+.attemptResponse ul{
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.attemptResponse ul li{
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.attemptResponse .options li.selected{
+    background-color: red;
+}
+.attemptResponse .options li.correct{
+    background-color: green;
+}
+.attemptResponse .options li.selected.correct{
+    background-color: blue;
+}

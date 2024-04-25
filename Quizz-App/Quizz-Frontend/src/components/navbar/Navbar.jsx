@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Navbar.css"
 import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
 
-  const authToken = sessionStorage.getItem('authToken');
+  const [authToken, setAuthToken] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  
+
+  useEffect(()=>{
+    setAuthToken(sessionStorage.getItem('authToken'));
+
+    if(authToken){
+      setIsLoggedIn(true)
+    }
+    else{
+      setIsLoggedIn(false)
+    }
+  },[authToken, isLoggedIn]);
+
+
   return (
     <nav>
         <div className="logo">          
@@ -16,7 +31,7 @@ const Navbar = () => {
         <div className="links">
             <ul>
                 <NavLink className={(e)=>{return e.isActive?"navActive": ''}} to={'/'}><li>Home</li></NavLink>
-                <NavLink className={(e)=>{return e.isActive?"navActive": ''}} to={'/contact'}><li>Contact Us</li></NavLink>
+                
                 <NavLink className={(e)=>{return e.isActive?"navActive": ''}} to={'/attempthistory'}><li>Attempt History</li></NavLink>
                 <NavLink className={(e)=>{return e.isActive?"navActive": ''}} to={'/createquizz'}><li>Create Quizz</li></NavLink>
                 <NavLink className={(e)=>{return e.isActive?"navActive": ''}} to={'/myquizzes'}><li>My Quizzs</li></NavLink>

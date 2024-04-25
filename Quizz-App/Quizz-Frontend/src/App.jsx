@@ -16,6 +16,7 @@ import AttemptQuizz from './components/attemptquizz/AttemptQuizz';
 import GetQuizz from './components/quizz/GetQuizz';
 import Profile from './components/profile/Profile';
 import AttemptHistory from './components/AttemptHistory/AttemptHistory';
+import AttemptResponse from './components/AttemptResponse/AttemptResponse';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path="/attemptquizz/:quizzId" element={<AttemptQuizz />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/attempthistory" element={<AttemptHistory />} />
+          <Route path="/response/:attemptId" element={<AttemptResponse />} />
           {/* <Route path="/generatequestions/get/:quizzId" element={<GenerateQuestions />} /> */}
         </Routes>
       </>

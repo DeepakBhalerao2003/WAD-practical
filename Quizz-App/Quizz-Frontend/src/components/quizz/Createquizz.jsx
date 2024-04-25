@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import "./CreateQuizz.css";
@@ -17,14 +17,19 @@ const Createquizz = () => {
     watch,
     formState: { isSubmitting, errors },
   } = useForm();
-
+  const authToken = sessionStorage.getItem("authToken");
   // .Checking if User is Authorised or not
   const Authorised = false;
   const CheckUser = () => {
-    const authToken = sessionStorage.getItem("authToken");
+    
 
     console.log(authToken);
   };
+  useEffect(()=>{
+    if(!authToken){
+      navigate('/login');
+  }  
+  })
 
   const onSubmit = async (data) => {
     const authToken = sessionStorage.getItem("authToken");
