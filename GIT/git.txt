@@ -1,0 +1,80 @@
+PS C:\Users\deepa\OneDrive\Desktop\WAD Practicals> git clone https://github.com/DeepakBhalerao2003/WAD-practical.git
+Cloning into 'WAD-Practicals'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (9/9), done.
+Resolving deltas: 100% (2/2), done.
+
+PS C:\Users\deepa\OneDrive\Desktop\WAD Practicals> cd .\WAD-practical\
+PS C:\Users\deepa\OneDrive\Desktop\WAD Practicals\WAD-practical\Quizz-App> cd ..
+PS C:\Users\deepa\OneDrive\Desktop\WAD Practicals\WAD-practical> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Quizz-App/Quizz-Backend/routes/quizzattempts.js
+        modified:   Quizz-App/Quizz-Backend/server.js
+        modified:   Quizz-App/Quizz-Frontend/src/App.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/AttemptHistory/AttemptHistory.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/attemptquizz/AttemptQuizz.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/generateQuestions/GenerateQuestions.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/home/Home.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/navbar/Navbar.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/quizz/Createquizz.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/quizz/GetQuizz.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/signup/Signup.jsx
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Quizz-App/Quizz-Backend/routes/quizzresponse.js
+        Quizz-App/Quizz-Frontend/src/components/AttemptResponse/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\deepa\OneDrive\Desktop\WAD Practicals\WAD-practical> git add .
+warning: in the working copy of 'Quizz-App/Quizz-Frontend/src/App.jsx', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\deepa\OneDrive\Desktop\WAD Practicals\WAD-practical> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Quizz-App/Quizz-Backend/routes/quizzattempts.js
+        new file:   Quizz-App/Quizz-Backend/routes/quizzresponse.js
+        modified:   Quizz-App/Quizz-Backend/server.js
+        modified:   Quizz-App/Quizz-Frontend/src/App.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/AttemptHistory/AttemptHistory.jsx
+        new file:   Quizz-App/Quizz-Frontend/src/components/AttemptResponse/AttemptResponse.css
+        new file:   Quizz-App/Quizz-Frontend/src/components/AttemptResponse/AttemptResponse.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/attemptquizz/AttemptQuizz.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/generateQuestions/GenerateQuestions.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/home/Home.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/navbar/Navbar.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/quizz/Createquizz.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/quizz/GetQuizz.jsx
+        modified:   Quizz-App/Quizz-Frontend/src/components/signup/Signup.jsx
+
+PS C:\Users\deepa\OneDrive\Desktop\WAD Practicals\WAD-practical> git commit -m "Some small changes done"
+[main db7b5ae] Some small changes done
+ 14 files changed, 285 insertions(+), 56 deletions(-)
+ create mode 100644 Quizz-App/Quizz-Backend/routes/quizzresponse.js
+ create mode 100644 Quizz-App/Quizz-Frontend/src/components/AttemptResponse/AttemptResponse.css
+ create mode 100644 Quizz-App/Quizz-Frontend/src/components/AttemptResponse/AttemptResponse.jsx
+PS C:\Users\deepa\OneDrive\Desktop\WAD Practicals\WAD-practical> git push origin main
+Enumerating objects: 55, done.
+Counting objects: 100% (55/55), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (30/30), done.
+Writing objects: 100% (30/30), 4.89 KiB | 1.63 MiB/s, done.
+Total 30 (delta 19), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (19/19), completed with 18 local objects.
+remote:
+remote: GitHub found 8 vulnerabilities on DeepakBhalerao2003/WAD-practical's default branch (2 high, 4 moderate, 2 low). To find out more, visit:
+remote:      https://github.com/DeepakBhalerao2003/WAD-practical/security/dependabot
+remote:
+To https://github.com/DeepakBhalerao2003/WAD-practical.git
+   d8c930f..db7b5ae  main -> main
+PS C:\Users\deepa\OneDrive\Desktop\WAD Practicals\WAD-practical> 
