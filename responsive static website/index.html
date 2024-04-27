@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Swiperjs Css -->
+    <!-- Swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Navbar Css -->
+    <link rel="stylesheet" href="navbar.css" />
+    <!-- footer -->
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="./index.html" class="brand">WinEarth</a>
+          <div class="burger" id="burger">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </div>
+          <span class="overlay"></span>
+          <div class="menu" id="menu">
+            <ul class="menu-inner">
+              <li class="menu-item">
+                <a class="menu-link" href="index.html">Home</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="about.html">About</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="gallery.html">Gallery</a>
+              </li>
+              <!-- <li class="menu-item"><a class="menu-link" href="#">Project</a></li> -->
+              <!-- <li class="menu-item"><a class="menu-link" href="#">Support</a></li> -->
+            </ul>
+          </div>
+          <a href="./donate.html" class="menu-block">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- First Section -->
+    <section class="firstSection hidden">
+      <!-- <div class="slider">
+            <img src="images/1.jpg" alt="firstImg" class="mySlides">
+            <img src="images/2.jpg" alt="second image" class="mySlides">
+            <img src="images/3..avif" alt="third img" class="mySlides">
+            <img src="images/3..avif" alt="third img" class="mySlides">
+            <img src="images/6.jpeg" alt="fifth image" class="mySlides">
+        </div> -->
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/1.jpg" alt="firstImg" class="mySlides" />
+            <!-- <div class="textOnSlider">
+              <div class="title">
+                Desilt Gangapur Dam: Restore Water, Restore Life
+              </div>
+              <div class="quote" id="quote"></div>
+            </div> -->
+          </div>
+          <div class="swiper-slide">
+            <img src="images/2.jpg" alt="second image" class="mySlides" />
+            <!-- <div class="textOnSlider">
+              <div class="title">गाळमुक्त धरण व गाळयुक्त शिवार अभियान</div>
+              <div class="quote" id="quote"></div>
+            </div> -->
+          </div>
+          <div class="swiper-slide">
+            <img src="images/3..avif" alt="third img" class="mySlides" />
+            <!-- <div class="textOnSlider">
+              <div class="title">गाळमुक्त धरण व गाळयुक्त शिवार अभियान</div>
+              <div class="quote" id="quote"></div>
+            </div> -->
+          </div>
+          <div class="swiper-slide">
+            <img src="images/3..avif" alt="third img" class="mySlides" />
+            <!-- <div class="textOnSlider">
+              <div class="title">गाळमुक्त धरण व गाळयुक्त शिवार अभियान</div>
+              <div class="quote" id="quote"></div>
+            </div> -->
+          </div>
+          <div class="swiper-slide">
+            <img src="images/6.jpeg" alt="fifth image" class="mySlides" />
+            <!-- <div class="textOnSlider">
+              <div class="title">गाळमुक्त धरण व गाळयुक्त शिवार अभियान</div>
+              <div class="quote" id="quote"></div>
+            </div> -->
+          </div>
+        </div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="textOnSlider">
+        <!-- <div class="title">गाळमुक्त धरण व गाळयुक्त शिवार अभियान</div> -->
+        <div class="title">Desilt Gangapur Dam: Restore Water, Restore Life</div>
+        <div class="quote" id="quote"></div>
+      </div>
+
+      <!-- typed -->
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+      <script>
+        var typed = new Typed(".quote", {
+          strings: [
+            "पाणी जीवन आहे त्याची काळजी घ्या",
+            "पाणी नाही द्रव्य ते आहे अमृततुल्य",
+            "दुष्काळाची नको असेल आपत्ती, तर वेळीच जपा जलसंपत्ती.",
+            "थेंब थेंब वाचवा पाण्याचा, हाच मार्ग आहे सुखी भविष्याचा."
+          ],
+          typeSpeed: 50,
+          backSpeed: 50,
+          loop: true
+        });
+      </script>
+    </section>
+    <!-- Image Gallery - Dams -->
+
+    <section class="second">
+      <span>
+        <h1>Dams in Nashik</h1>
+        <img src="images/title-decor.7784c819.svg" alt="" />
+      </span>
+      <!-- card start -->
+      <div class="damcard">
+        <div class="damimg">
+          <img src="images/DAMS/gangapur.jpg" alt="" />
+        </div>
+        <div class="description">
+          <div class="desc">
+            <p class="descTitle">Gangapur</p>
+            <p>
+                The height of the dam above lowest foundation is 36.59 m (120.0 ft) while the length is 3,902 m (12,802 ft). The volume content is 4,612 km3 (1,106 cu mi) and gross storage capacity is 215,880.00 km3 (51,792.37 cu mi).[2]
+
+                Due to silt deposition in the reservoir area, the storage capacity of the dam has gradually reduced. The right side canal running towards Nashik is also closed due to the high civilization in the area. For these two reasons, an upstream dam, Kashypi Dam, is constructed which opened in 2000 [3]
+            </p>
+            <!-- <button>View Details</button> -->
+          </div>
+        </div>
+      </div>
+      <!-- card end  -->
+
+      <!-- card start  -->
+      <div class="damcard reverse">
+        <div class="description">
+          <div class="desc">
+            <p class="descTitle">Bhavali</p>
+            <p>
+                Bhavali Dam, is an earthfill dam on Bham river near Igatpuri, Nashik district in state of Maharashtra in India. Bhavali Dam is located near village Bhavali on Darana river tributary of Godavari river.
+                The height of the dam above lowest foundation is 33.97 m (111.5 ft) while the length is 1,550 m (5,090 ft). The volume content is 329 km3 (79 cu mi) and gross storage capacity is 75,050.00 km3 (18,005.45 cu mi).[1]
+            </p>
+            <!-- <button>View Details</button> -->
+          </div>
+        </div>
+
+        <div class="damimg">
+          <img src="images//DAMS/Bhavali.jpg" alt="" />
+        </div>
+      </div>
+      <!-- card end  -->
+
+      <!-- card start -->
+      <div class="damcard">
+        <div class="damimg">
+          <img src="images/DAMS/karanjwan.jpg" alt="" />
+        </div>
+        <div class="description">
+          <div class="desc">
+            <p class="descTitle">Karanjwan </p>
+            <p>
+                Karanjwan Dam, is an earthfill dam on Kadwa river near Dindori in state of Maharashtra in India.The height of the dam above lowest foundation is 39.31 m (129.0 ft) while the length is 2,483 m (8,146 ft). The volume content is 1,960 km3 (470 cu mi) and gross storage capacity is 175,580.00 km3 (42,123.88 cu mi).[2]
+            <!-- <button>View Details</button> -->
+          </div>
+        </div>
+      </div>
+      <!-- card end  -->
+
+      <!-- card start  -->
+      <div class="damcard reverse">
+        <div class="description">
+          <div class="desc">
+            <p class="descTitle">Vaitarna</p>
+            <p>
+                The Vaitarna River (IAST: Vaitarṇā, pronunciation: [ʋəit̪əɾɳaː]) is a river in Nashik and Palghar district of Maharashtra. The Tansa is its left bank tributary and the Pinjal, Dehraja, and Surya are its right bank tributaries. Upper stretches of the Vaitarna are clean but in lower stretches it is polluted due to untreated industrial and civic waste. The Vaitarna is one of the most polluted rivers in India.[1]
+            </p>
+            <!-- <button>View Details</button> -->
+          </div>
+        </div>
+        <div class="damimg">
+          <img src="images/DAMS/Vaitarna.jpg" alt="" />
+        </div>
+      </div>
+      <!-- card end  -->
+    </section>
+
+    <!-- The Crisis -->
+    <section class="third">
+        <span>
+            <h1>The Crisis</h1>
+            <img src="images/title-decor.7784c819.svg" alt="" />
+          </span>
+      <ul class="accordian">
+        
+        <li>
+          <input type="radio" name="accordian" id="first" checked />
+          <label for="first">Storage of Water</label>
+          <div class="content">
+            <img src="images/1.jpg" alt="" />
+            <p>
+              Water storage is a fundamental aspect of water resource
+              management, especially in regions prone to seasonal fluctuations
+              in rainfall and areas dependent on agriculture. Effective water
+              storage systems help in mitigating the impacts of droughts,
+              improving agricultural productivity, and ensuring water
+              availability for diverse needs throughout the year.
+            </p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordian" id="second" />
+          <label for="second">Sedimentation in Water Bodies</label>
+          <div class="content">
+            <img src="images/crisis_1.jpg" alt="" />
+            <p>
+              Over time, dams, rivers, and reservoirs accumulate sediment that
+              reduces their water storage capacity and can impact water quality
+              and flow. This sedimentation can lead to reduced efficiency in
+              water management systems, posing a significant problem in
+              water-scarce areas.
+            </p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordian" id="third" />
+          <label for="third">Water Storage</label>
+          <div class="content">
+            <img src="images/1.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+              magnam minus incidunt voluptatibus voluptatum nostrum recusandae
+              debitis sed omnis fugiat at rerum, dicta ab eum ipsa sequi hic
+              veniam sit repellat quia quas aut officia? Tenetur quidem
+              inventore ipsa praesentium quia beatae provident, cumque,
+              recusandae expedita, temporibus maxime aliquid eaque.
+            </p>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="accordian" id="fourth" />
+          <label for="fourth">Water Storage</label>
+          <div class="content">
+            <img src="images/crisis_1.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+              magnam minus incidunt voluptatibus voluptatum nostrum recusandae
+              debitis sed omnis fugiat at rerum, dicta ab eum ipsa sequi hic
+              veniam sit repellat quia quas aut officia? Tenetur quidem
+              inventore ipsa praesentium quia beatae provident, cumque,
+              recusandae expedita, temporibus maxime aliquid eaque.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Our Impact Swiper -->
+
+    <section class="fourthSection hidden">
+      <div class="ourImpact">
+        <span>
+          <h1 class="sectionTitle">Our Impact</h1>
+
+          <img src="images/title-decor.7784c819.svg" alt="" />
+        </span>
+        <!-- <p class="impactDesciption">
+                "Our alumni are the epitome of success, driving change and making remarkable strides in their respective fields. With a foundation rooted in excellence, they've been placed in top-tier companies worldwide, shaping the future with their expertise and vision. Join our prestigious alumni network and become part of a legacy of achievement."
+            </p> -->
+      </div>
+      <div class="impactSlider">
+        <div class="slider-container swiper">
+          <div class="slide-card">
+            <div class="card-wrapper swiper-wrapper">
+              <!-- card start -->
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="imgoverlay"></span>
+
+                  <div class="card-image">
+                    <img src="images/farmer.jpeg" alt="" class="card-img" />
+                  </div>
+                  <h5 class="card-name">Fertile Land</h5>
+                </div>
+                <div class="card-content">
+                  <p class="description">
+                    Silt from dams often contains nutrients like phosphorus,
+                    potassium, and nitrogen, essential for plant growth. By
+                    testing the desilted material for nutrient content and
+                    potential contaminants, farmers can determine if it's
+                    suitable for use as a soil amendment. When appropriately
+                    applied, this nutrient-rich silt can improve soil fertility
+                    and crop yields.
+                  </p>
+                  <!-- <button class="viewmore">View More</button> -->
+                </div>
+
+                <div class="footer">No of Farmers Benefited: 2403</div>
+              </div>
+              <!-- card-end -->
+
+              <!-- card start -->
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="imgoverlay"></span>
+
+                  <div class="card-image">
+                    <img src="images/2.jpg" alt="" class="card-img" />
+                  </div>
+                  <h5 class="card-name">Increased Water Storage</h5>
+                </div>
+                <div class="card-content">
+                  <p class="description">
+                    Over time, sediment such as silt, sand, and debris
+                    accumulate in reservoirs due to erosion and runoff from
+                    surrounding land. This sedimentation reduces the volume of
+                    water the reservoir can hold. Desilting involves excavating
+                    and removing these sediments, thereby creating more space
+                    within the reservoir to retain water.
+                  </p>
+                  <!-- <button class="viewmore">View More</button> -->
+                </div>
+                <div class="footer">Water Storage Increased by: 1L+ litres</div>
+              </div>
+              <!-- card-end -->
+
+              <!-- card start -->
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="imgoverlay"></span>
+
+                  <div class="card-image">
+                    <img
+                      src="images/DAMS/karanjwan.jpg"
+                      alt=""
+                      class="card-img"
+                    />
+                  </div>
+                  <h5 class="card-name">Protection of Infrastructure</h5>
+                </div>
+                <div class="card-content">
+                  <p class="description">
+                    As sediment accumulates in a reservoir, it can reduce the
+                    available storage capacity behind the dam. This
+                    sedimentation not only decreases the volume of water the
+                    reservoir can hold but also affects the dam's ability to
+                    control water flow. Sediment can clog outlets, intake
+                    structures, or spillways, impeding the dam's ability to
+                    release water efficiently during heavy inflows.
+                  </p>
+                  <!-- <button class="viewmore">View More</button> -->
+                </div>
+
+                <div class="footer">No of Farmers Benefited: 2403</div>
+              </div>
+              <!-- card-end -->
+
+              <!-- card start -->
+              <div class="card swiper-slide">
+                <div class="image-content">
+                  <span class="imgoverlay"></span>
+
+                  <div class="card-image">
+                    <img
+                      src="images/waterquality.jpeg"
+                      alt=""
+                      class="card-img"
+                    />
+                  </div>
+                  <h5 class="card-name">Improved Water Quality</h5>
+                </div>
+                <div class="card-content">
+                  <p class="description">
+                    Desilting removes sediment from water bodies, improving
+                    water quality by reducing contaminants and turbidity.
+                    Cleaner water supports safe drinking supplies, efficient
+                    irrigation systems, and optimal conditions for industrial
+                    processes. Additionally, clearer water fosters healthier
+                    aquatic ecosystems by promoting sunlight penetration and
+                    reducing the risk of algal blooms.
+                  </p>
+                  <!-- <button class="viewmore">View More</button> -->
+                </div>
+
+                <div class="footer">No of Farmers Benefited: 2403</div>
+              </div>
+              <!-- card-end -->
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-next swiper-Navtn"></div>
+          <div class="swiper-button-prev swiper-Navtn"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footerContainer">
+        <div class="footer">
+          <div class="title">Win Earth <br /></div>
+          <img src="images/title-decor.7784c819.svg" alt="" />
+          <p class="desc">Save Water, Save the Earth</p>
+        </div>
+
+        <hr class="hidden" />
+
+        <div class="links">
+          <h5>Quick Links</h5>
+          <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="aboutus"><li>About Us</li></a>
+            <a href="gallery.html"><li>Gallery</li></a>
+            <a href="donate"><li>Support Us</li></a>
+          </ul>
+        </div>
+
+        <div class="flexbreak"></div>
+
+        <div class="copyright">
+          <p>Copyright @Winjit Foundation</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Navbar JS  -->
+    <script src="navbar.js"></script>
+
+    <!-- Swiperjs script -->
+    <!-- <script src="js/swiper-bundle.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -21,3 +21,19 @@
     font-size: 1.3rem;
 
 }
+
+.AttemptHistoryContainer button{
+    width: 200px;
+    padding: 10px 20px;
+    margin:  0px auto;
+    background-color: rgb(255, 203, 105);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.AttemptHistoryContainer button:hover{
+    background-color: orange;
+    cursor: pointer;
+}
