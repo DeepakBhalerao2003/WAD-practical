@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 // Connection URI
-const uri = 'mongodb://127.0.0.1:27017/mongo-api';
+const uri = 'mongodb+srv://kbtug21317:Deepak8247@cluster0.dvhpejv.mongodb.net/aewrafer';
 
 mongoose.connect(uri).then(()=>{
     console.log('Connected to MongoDb');

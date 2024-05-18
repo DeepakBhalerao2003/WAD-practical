@@ -8,7 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <button id="signout">
+    <div class="main">
+      <button id="signout">
         <div class="signout">
             Log Out
             <img src="image.png" alt="signout">
@@ -27,14 +28,40 @@
           </div>
         </div>
       </div>
+    </div>
+
+      <div class="notloggedin">
+        You are not Logged In <br>Redirecting to the login page
+      </div>
 
 
       <script>
         $(document).ready(()=>{
-           
+            const isAuth = localStorage.getItem('isAuth');
+            console.log(isAuth)
+            if(isAuth === 'false'){
+              console.log('hi')
+            }
+            if (isAuth === 'false') {
+              setTimeout(()=>{
+                console.log('hello')
+              },2000)
+              // alert("You are not Logged In \nRedirecting to the login page");
+              $('.notloggedin').addClass('active');
+              $('.main').addClass('inactive');
+              setTimeout(() => {
+                  window.location.href = "http://127.0.0.1:5500/login.html";
+              }, 10000); 
+             
+            }
+            else{
+              $('.notloggedin').removeClass('active');
+              $('.main').removeClass('inactive');
+            }
 
             $('#signout').click(()=>{
-                window.location.href = 'http://127.0.0.1:5500/ajax/login.html';
+                localStorage.setItem('isAuth', false);
+                window.location.href = 'http://127.0.0.1:5500/login.html';
             })
             
         })

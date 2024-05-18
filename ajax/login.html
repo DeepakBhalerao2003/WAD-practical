@@ -80,8 +80,9 @@ button{
                 }
 
                 if(validateInfo.email === loginInfo.email && validateInfo.password === loginInfo.password){
+                    localStorage.setItem('isAuth', true)
                     alert('Login Successfull');
-                    window.location.href = 'http://127.0.0.1:5500/ajax/home.html';
+                    window.location.href = 'http://127.0.0.1:5500/home.html';
                 }
                 else{
                     alert('Invalid Credentials, Please try again');
@@ -89,7 +90,7 @@ button{
             });
 
             $('#register').click(()=>{
-                window.location.href = 'http://127.0.0.1:5500/ajax/signup.html';
+                window.location.href = 'http://127.0.0.1:5500/signup.html';
             })
             
         })

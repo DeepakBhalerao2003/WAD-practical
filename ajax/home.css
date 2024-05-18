@@ -94,3 +94,23 @@ body{
 .signout:hover{
     background-color: red;
 }
+
+.inactive{
+    opacity: 0.2 !important;
+    filter: blur(10px)!important;
+}
+
+.notloggedin{
+    display: none;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.notloggedin.active{
+    position: fixed !important;
+    margin: auto;
+    opacity: 1 !important;
+    filter: blur(00px) !important;
+    z-index: 99;
+    display: block;
+}
